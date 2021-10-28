@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:backgroundTint="#FFFFFF"
+    android:padding="@dimen/_16mdp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/explore_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/acme"
+        android:text="Chembra Peak"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/explore_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/explore_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150mdp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/most4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_heading"
+        app:riv_corner_radius="6dip"
+        app:riv_mutate_background="true" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/explore_rating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="4.6"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_image"
+        app:layout_constraintEnd_toEndOf="@+id/explore_image" />
+
+    <RatingBar
+        android:id="@+id/explore_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:rating="4.6"
+        android:theme="@style/RatingBarTwo"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_image"
+        app:layout_constraintEnd_toStartOf="@+id/explore_rating_text"
+        app:layout_constraintTop_toTopOf="@+id/explore_rating_text"
+        app:layout_constraintVertical_bias="0.16000003" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/explore_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/muli"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:text="@string/first_slide_desc"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_10mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_image" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1mdp"
+        android:layout_marginTop="16dp"
+        android:background="@color/lightBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
