@@ -67,7 +67,7 @@
         android:id="@+id/explore_desc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/muli"
         android:inputType="textMultiLine"
         android:maxLines="3"
